@@ -1,0 +1,23 @@
+def sumowanie(lista):
+    if len(lista)==1:
+        if lista[0]<0:
+            return lista[0]
+        else:
+            return 0
+    else:
+        if lista[0]<0:
+            return lista[0] + sumowanie(lista[1:])
+        else:
+            return sumowanie(lista[1:])
+
+
+lista1=[-1, 2, -3, 4, -5, 6, -12, 9]
+lista2=[-2, -6, -4, 47, 7]
+lista3=[3, 8, 35, -34, -12, 9]
+
+wynik1=sumowanie(lista1)
+print("wynikiem dodawania liczb ujemnych z listy", lista1, "jest", wynik1)
+wynik2=sumowanie(lista2)
+print("wynikiem dodawania liczb ujemnych z listy", lista2, "jest", wynik2)
+wynik3=sumowanie(lista3)
+print("wynikiem dodawania liczb ujemnych z listy", lista3, "jest", wynik3)
